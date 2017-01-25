@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="Keywords" content="__________________________" />
+    <meta name="Description" content="________________________" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <!--Add icons to support all browsers/devices -->
+    <link rel="stylesheet" type="text/css" href="Assets/CSS/styles.css" />
+
+
+    <!--Fonts-->
+    <link rel='stylesheet' id='bluth-googlefonts-css' href='http://fonts.googleapis.com/css?family=Lato%3A300%2C400%2C400italic%2C700%2C900%7CRoboto+Slab%3A300%2C400%2C700%7CLato%3A300%2C400%2C400italic%2C700%2C900&#038;subset=latin&#038;ver=4.4.2' type='text/css'
+        media='all' />
+    <!--End of Fonts-->
+    <title>Josh Davey - Full Stack Developer</title>
+
+    <!--Scripts-->
+    <script type="text/javascript" src="Assets/js/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="Assets/js/jquery.mixitup.min.js"></script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="heading">
+            <h1>Josh Davey <small> Full Stack Developer</small></h1>
+            <h2><a href="Assets/CV.pdf">CV</a></h2>
+            <h2><a class="active" href="about.html">About</a></h2>
+            <h2><a href="index.html">Portfolio</a></h2>
+
+            <img id="navBtn" src="Assets/Images/Mobile_Nav.png">
+            <div id="mobileNavMenu">
+                <a href="index.html">
+                    <div class="navItm">Portfolio</div>
+                </a>
+                <a href="about.html">
+                    <div class="navItm active">About</div>
+                </a>
+                <a href="Assets/CV.pdf" target="_blank">
+                    <div class="navItm">CV</div>
+                </a>
+            </div>
+        </div>
+
+
+
+        <div id="content">
+            <div class="line"></div>
+            <div id="bio">
+                <p><b>Hi I'm Josh Davey</b>, a second year Computer Information Systems student at the University of Lincoln. Alongside my degree I work as a Business Intelligence Developer at the University of Lincoln, and also use my spare time to develop
+                    mobile applications and websites, keeping up with the latest technologies.</p>
+                <p><b>Email:</b> _____________</p>
+                <p><b>Key Skills:</b></p>
+                <ul>
+                    <li>Android development (Android development studio, Java).</li>
+                    <li>Cross platform development (Phone gap).</li>
+                    <li>Front and back end development in HTML, CSS, SCSS, JavaScript, PHP.</li>
+                    <li>Web frameworks (Foundation, Bootstrap, angular.js, react.js and node.js).</li>
+                    <li>Cloud Computing (PowerShell scripting to deploy/maintiain cloud services in Azure).</li>
+                    <li>Version control in Git/GitHub.</li>
+                    <li>SQL Server Management Studio, SSRS, SSIS & T-SQL scripting.</li>
+                    <li>C# Windows Application Development.</li>
+                </ul>
+
+                <p><b>Experience:</b></p>
+                <ul>
+                    <li>Business Intelligence Developer - University of Lincoln (Aug 2015 - Current).</li>
+                </ul>
+
+                <p><b>Qualifications:</b></p>
+                <ul>
+                    <li>Computer Information Systems BSc, University of Lincoln - Expected 2:1.</li>
+                    <li>Neale-Wade Academy Sixth Form - A Levels (A*,A*,B,c).
+                </ul>
+            </div>
+        </div>
+
+        <div id="footer">Developed By Josh Davey (2016).</div>
+        <div style="clear:both;"></div>
+    </div>
+
+
+    <script type="text/javascript">
+        //Hides mobile navigation menu as default.
+        $("#mobileNavMenu").hide();
+
+        //Combines slide and fade toggle functions together.
+        $.fn.slideFade = function(speed, easing, callback) {
+            return this.animate({
+                opacity: 'toggle',
+                height: 'toggle'
+            }, speed, easing, callback);
+        };
+
+        //Toggles mobile nav menu visibility on click.
+        $("#navBtn").click(function() {
+            $("#mobileNavMenu").slideFade();
+        });
+    </script>
+
+</body>
+
+</html>

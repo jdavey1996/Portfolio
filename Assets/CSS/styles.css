@@ -1,0 +1,287 @@
+html {
+    overflow-y: scroll;
+}
+body, p {
+    font-family: "Lato", Helvetica, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    -webkit-text-size-adjust: 100%;
+}
+p {
+    margin: 5px 0 0 0;
+    -webkit-text-size-adjust: 100%;
+}
+ul {
+    margin: 0;
+}
+h1 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #555;
+    display: inline;
+}
+h1 small {
+    font-size: 15px;
+    font-weight: 400;
+    color: #555;
+    opacity: .7;
+}
+h2 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #555;
+    float: right;
+    display: inline;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+h2 > a {
+    color: #555;
+    position: relative;
+    text-decoration: none;
+}
+h2 > a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #e95a44;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+h2 > a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+a.active {
+    text-decoration: underline;
+}
+#wrapper {
+    margin: auto;
+    max-width: 1100px;
+    min-width: 180px;
+    height: auto;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+#heading {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#filters {
+    margin-left: 1%;
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+}
+#filters li {
+    float: left;
+    display: block;
+    padding: 5px 15px;
+    color: #666;
+    cursor: pointer;
+}
+#filters li.active {
+    background: #e95a44;
+    color: #fff;
+}
+#content {
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+#content .portfolio {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    width: 31%;
+    height: auto;
+    margin: 1%;
+    display: none;
+    overflow: hidden;
+    position: relative !important;
+    background: #666;
+    vertical-align: top;
+}
+.portfolio img {
+    max-width: 100%;
+    position: relative;
+    vertical-align: middle;
+}
+.portfolio .label {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #e95a44;
+    background: #e95a44;
+    overflow: hidden;
+}
+.portfolio .label-title {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    top: 5px;
+    padding-left: 8px;
+}
+.portfolio .label-desc {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    font-size: 11px;
+    position: relative;
+    padding-top: 5px;
+    padding-left: 8px;
+}
+.expandBtn {
+    float: right;
+    right: 12px;
+    bottom: 19px;
+    width: 12px;
+    height: 12px;
+    transition: transform 0.3s, opacity 0.3s;
+    cursor: pointer;
+}
+.rotate {
+    transform: rotate(180deg);
+}
+.portfolio .label-expanded {
+    position: relative;
+    display: none;
+    width: 100%;
+    height: auto;
+    background: #e95a44;
+    padding-bottom: 5px;
+}
+.portfolio .label-expanded-text {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    font-size: 11px;
+    position: relative;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+.portfolio .label-expanded-link {
+    color: #555;
+    text-decoration: underline;
+    padding-top: 5px;
+    font-size: 11px;
+    font-weight: bold;
+    position: relative;
+    padding-left: 9px;
+    padding-right: 9px;
+}
+#footer {
+    font-size: 14px;
+    font-weight: 700;
+    width: 100%;
+    float: left;
+    height: auto;
+    text-align: center;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+.line {
+    border-bottom: 2px solid #e95a44;
+}
+#bio {
+    float: left;
+    width: 95%;
+    height: auto;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+p b {
+    color: #e95a44;
+}
+
+
+@media all and (max-width: 900px) {
+    #content .portfolio {
+        width: 47.5%;
+        margin: 1%;
+    }
+}
+@media only screen and (min-width:700px) {
+    #navBtn {
+        display: none;
+    }
+    #mobileNavMenu {
+        display: none !important;
+    }
+}
+@media all and (max-width: 699px) {
+    h1 {
+        font-size: 24px;
+    }
+    h1 small {
+        font-size: 12px;
+    }
+    h2 {
+        display: none;
+    }
+    #navBtn {
+        display: inline-block;
+        float: right;
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+    }
+    #mobileNavMenu a {
+        text-decoration: none;
+    }
+    a .active {
+        background: #e95a44;
+        color: #fff;
+    }
+    .navItm {
+        width: 100%;
+        height: 20px;
+        text-align: center;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        font-size: 14px;
+        font-weight: 700;
+        color: #555;
+        text-transform: uppercase;
+    }
+}
+@media all and (max-width:449px) {
+    #content .portfolio {
+        width: 99%;
+        margin: 1%;
+    }
+    #wrapper {
+      margin-right: 3px;
+    }
+}
+
+/*extremely small devices*/
+
+@media all and (max-width: 249px) {
+    h1 small {
+        display: none;
+    }
+    #filters li {
+        padding: 5px 10px;
+    }
+    .navItm {
+        font-size: 12px;
+    }
+}
